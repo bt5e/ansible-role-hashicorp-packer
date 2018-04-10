@@ -1,0 +1,17 @@
+---
+- name: Install utilities
+  yum:
+    name: "{{ item }}"
+  with_items:
+    - unzip
+  become: yes
+
+- name: Download packer
+  unarchive:
+    src: "{{ packer_download_url }}"
+    dest: "{{ packer_bin_path }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0755
+  become: yes
