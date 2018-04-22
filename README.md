@@ -1,7 +1,7 @@
 Ansible Role - HashiCorp Packer - CentOS
 ========================================
 
-[![Build Status](https://travis-ci.org/bt5e/ansible-role-packer.svg?branch=master)](https://travis-ci.org/bt5e/ansible-role-packer)
+[![Build Status](https://travis-ci.org/bt5e/ansible-role-hashicorp-packer.svg?branch=master)](https://travis-ci.org/bt5e/ansible-role-hashicorp-packer)
 
 HashiCorp Packer install based on: https://www.packer.io/intro/getting-started/install.html
 
