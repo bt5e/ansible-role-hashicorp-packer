@@ -1,0 +1,5 @@
+---
+- name: cleanup temp download directory
+  file:
+    path: "{{ temp_download_dir.path }}"
+    state: absent

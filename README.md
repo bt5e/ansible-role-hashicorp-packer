@@ -5,6 +5,8 @@ Ansible Role - HashiCorp Packer - CentOS
 
 HashiCorp Packer install based on: https://www.packer.io/intro/getting-started/install.html
 
+Binary is installed as `packer.io` to avoid name conflict with existing `packer` binary.
+
 Requirements
 ------------
 
