@@ -4,22 +4,21 @@
     name: unzip
   become: yes
 
-- name: create temporary download directory
-  tempfile:
+- name: Create temporary download directory
+  file:
+    path: "{{ packer_tmp_download_dir }}"
     state: directory
-  register: temp_download_dir
-  notify: "cleanup temp download directory"
 
 - name: Download packer
   unarchive:
     src: "{{ packer_download_url }}"
-    dest: "{{ temp_download_dir.path }}"
+    dest: "{{ packer_tmp_download_dir }}"
     remote_src: yes
 
 - name: Copy binary to bin directory
   copy:
     remote_src: yes
-    src: "{{ temp_download_dir.path }}/packer"
+    src: "{{ packer_tmp_download_dir }}/packer"
     dest: "{{ packer_bin_path }}/packer.io"
     owner: root
     group: root

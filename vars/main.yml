@@ -2,4 +2,5 @@
 packer_version: 1.2.2
 packer_dist_file: "packer_{{ packer_version }}_linux_amd64.zip"
 packer_download_url: "https://releases.hashicorp.com/packer/{{ packer_version }}/{{ packer_dist_file }}"
+packer_tmp_download_dir: "/tmp/ansible-role-hashicorp-packer"
 packer_bin_path: "/usr/local/bin/"
