@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: hashicorp_packer
   author: Ben Tse
   description: HashiCorp Packer
   license: MIT
